@@ -1,0 +1,20 @@
+{
+  "name": "typescript-playground",
+  "version": "1.0.0",
+  "description": "Horror stories for Non-TS fans",
+  "author": "",
+  "license": "ISC",
+  "keywords": ["typescript", "ts-challenges", "ts-behavior"],
+  "scripts": {
+    "eslint": "npx eslint .",
+    "eslint:fix": "npx eslint . --fix",
+    "typecheck": "tsc --noEmit",
+    "typecheck:watch": "tsc --noEmit --watch"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.7.1",
+    "@types/node": "^22.7.0",
+    "eslint": "^9.11.1",
+    "typescript": "^5.6.2"
+  }
+}
