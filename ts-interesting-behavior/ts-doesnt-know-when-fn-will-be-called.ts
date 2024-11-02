@@ -25,3 +25,7 @@ function cancelOrder() {
   // тайпскрипт не может строго доказать что это присваивание приведет объёкт в неконсистентное состояниек (1)
   orderStates.status = 'cancel' // нет ошибки
 }
+
+const _cancelOrder = () => {
+  orderStates.status = 'cancel' // есть ошибка
+}

@@ -16,8 +16,13 @@ type TKeysMap = {
   c: 'z'
 }
 
-declare const record1: TRecord1
-declare const keysMap: TKeysMap
+const record1: TRecord1 = {
+  a: 1,
+  b: 'two',
+  c: false
+}
+
+const keysMap: TKeysMap = { a: 'x', b: 'y', c: 'z' }
 
 type TInvertedKeys1 = TInvert<TKeysMap>
 
@@ -30,4 +35,9 @@ const keysTransformer
       // @ts-expect-error bug ts...
     }, {} as { [key in X[keyof T]]: T[TInvert<X>[key]] })
 
+/**
+ * From: record: { a: 1, b: 'two', c: false }, keysMap: { a: 'x', b: 'y', c: 'z' }
+ * To: { x: 1, y: 'two', z: false }
+ */
 const record2 = keysTransformer(record1,keysMap)
+
