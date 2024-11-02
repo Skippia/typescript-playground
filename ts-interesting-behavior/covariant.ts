@@ -68,8 +68,3 @@ g = f // 💥
  * ?   2.1. (Default behavior): arguments of functions are co-variant
  * ?   2.2 (Stricter behavior with "strictFunctionTypes": true): arguments of functions are contra-variant
  */
-/**
- * This is what happens when we put contra-variant positions in a conditional type: TypeScript creates an intersection out of it.
- * Meaning that since we infer from a function argument, TypeScript knows that we have to fulfill the complete contract.
- * Creating an intersection of all constituents in the union.
- */
